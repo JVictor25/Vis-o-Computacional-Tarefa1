@@ -7,20 +7,17 @@ w = 280
 
 fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(12, 8))
 
-#imagem repleta de cinza (intensidade 127):
 matrizCinza=np.tile(127,(h,w))
 
 axes[0, 0].imshow(matrizCinza, cmap='gray', vmin=0, vmax=255)
 axes[0, 0].set_title('Cinza')
 
 
-#imagem repleta de branco (intensidade 255)
 matrizBranca=np.tile(255,(h,w))
 
 axes[0, 1].imshow(matrizBranca, cmap='gray', vmin=0, vmax=255)
 axes[0, 1].set_title('Branca')
 
-#listras verticais com largura 30
 linha=[]
 
 for i in range(4):
@@ -39,7 +36,6 @@ axes[0, 2].imshow(matrizVerticais, cmap='gray', vmin=0, vmax=255)
 
 axes[0, 2].set_title('Verticais')
 
-#listras horizontais com altura 30
 linhaBranca=np.tile(255,(30,w))
 linhaPreta=np.tile(0,(30,w))
 linhas=np.vstack((linhaBranca, linhaPreta))
@@ -52,7 +48,6 @@ matrizHorizontais=np.vstack((matrizHorizontais,linhaBranca))
 axes[1, 0].imshow(matrizHorizontais, cmap='gray', vmin=0, vmax=255)
 axes[1, 0].set_title('Horizontais')
 
-#padrão xadrez com casas de lado 30
 casaBranca=np.tile(255,(30,30))
 casaPreta=np.tile(0,(30,30))
 
